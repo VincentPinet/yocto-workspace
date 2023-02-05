@@ -1,0 +1,23 @@
+#!/bin/sh
+
+start() {
+   echo "Yeah!"
+   /usr/bin/my-app &
+}
+
+stop() {
+   echo "Can't Stop Won't Stop"
+}
+
+case "$1" in 
+   start)
+      start
+      ;;
+   stop)
+      stop
+      ;;
+   *)
+      echo "Usage: $0 {start|stop}"
+esac
+
+exit 0 
