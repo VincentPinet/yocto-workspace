@@ -4,3 +4,6 @@
 [submodule "layers/poky"]
 	path = layers/poky
 	url = https://github.com/yoctoproject/poky.git
+[submodule "layers/meta-openembedded"]
+	path = layers/meta-openembedded
+	url = https://github.com/openembedded/meta-openembedded.git

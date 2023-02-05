@@ -30,6 +30,7 @@ Therefore, here is what I landed on:
     │   └── tmp-glibc  
     ├── layers  
     │   ├── meta-my-layer  
+    │   ├── meta-openembedded  
     │   ├── meta-raspberrypi  
     │   └── poky  
     │       ├── bitbake  
