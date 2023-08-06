@@ -9,6 +9,7 @@ IMAGE_INSTALL = " \
   packagegroup-core-ssh-openssh \
   my-packagegroup \
   micro \
+  lf \
 "
 
 # Let's not build 4 versions of the same thing
