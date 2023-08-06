@@ -4,4 +4,6 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit packagegroup
 
-RDEPENDS:${PN} = "my-app"
+RDEPENDS:${PN} = " \
+    my-app \
+"
