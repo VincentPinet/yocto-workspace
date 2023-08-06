@@ -2,7 +2,11 @@
 
 # Wrapper of poky's oe-init-build-env to change default templates location
 
-export TEMPLATECONF="$(pwd)/layers/meta-my-layer/conf/templates/default"
+if [ -z "$TEMPLATECONF" ]; then
+    TEMPLATECONF="$(pwd)/layers/meta-my-layer/conf/templates/default"
+fi
+
 . layers/poky/oe-init-build-env
+
 # oe-init-build-env moves us into build folder for some reason..
 [ "$(pwd)" = "$BUILDDIR" ] && cd ..
