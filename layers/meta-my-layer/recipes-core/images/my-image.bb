@@ -8,6 +8,7 @@ IMAGE_INSTALL = " \
   packagegroup-base-extended \
   packagegroup-core-ssh-openssh \
   my-packagegroup \
+  micro \
 "
 
 # Let's not build 4 versions of the same thing
