@@ -1,6 +1,5 @@
 MACHINE ?= "my-machine"
 DISTRO ?= "my-distro"
 
-# DL_DIR = "/some/shared/download/directory/"
-# BB_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
-# PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
+BB_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
+PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
