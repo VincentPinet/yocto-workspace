@@ -1,0 +1,31 @@
+header:
+  version: 1
+
+machine: my-machine
+distro:  my-distro
+target:  my-image
+
+repos:
+  meta-my-layer:
+    path: layers/meta-my-layer
+
+  poky:
+    url: https://git.yoctoproject.org/git/poky
+    path: layers/poky
+    branch: master
+    layers:
+      meta:
+
+  meta-openembedded:
+    url: http://git.openembedded.org/meta-openembedded
+    path: layers/meta-openembedded
+    branch: master
+    layers:
+      meta-oe:
+      meta-networking:
+      meta-python:
+  
+  meta-raspberrypi:
+    url: https://github.com/agherzan/meta-raspberrypi.git
+    path: layers/meta-raspberrypi
+    branch: master

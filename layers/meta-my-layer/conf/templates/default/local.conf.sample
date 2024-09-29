@@ -1,5 +1,0 @@
-MACHINE ?= "my-machine"
-DISTRO ?= "my-distro"
-
-BB_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
-PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
