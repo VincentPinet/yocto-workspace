@@ -1,0 +1,32 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides: my-app
+# Default-Start:  2345
+# Default-Stop:   016
+# Short-Description: my-app-desc
+# Description: My App Description
+### END INIT INFO
+
+DAEMON=/usr/bin/my-app
+PIDFILE=/var/run/my-app.pid
+
+test -x $DAEMON || exit 1
+
+case "$1" in
+   start)
+      echo "Starting my-app.."
+      start-stop-daemon --start --quiet --background --make-pidfile --pidfile $PIDFILE --exec $DAEMON
+      ;;
+
+   stop)
+      echo "Stopping my-app.."
+      start-stop-daemon --stop --quiet --pidfile $PIDFILE
+      ;;
+
+   *)
+      echo "Usage: $0 {start|stop}"
+      exit 1
+esac
+
+exit 0
+
