@@ -13,7 +13,7 @@ Basic minimal workspace template to build your own Raspberry Pi Linux distro wit
 git clone https://github.com/VincentPinet/yocto-workspace.git
 cd yocto-workspace
 kas build
-dd if="build/tmp-glibc/deploy/images/my-machine/my-image-my-machine.rootfs.wic" of="<your_sd_card_here>"
+dd if="build/tmp/deploy/images/my-machine/my-image-my-machine.rootfs.wic" of="<your_sd_card_here>"
 ```
 
 ## Structure
@@ -55,6 +55,7 @@ dd if="build/tmp-glibc/deploy/images/my-machine/my-image-my-machine.rootfs.wic" 
 ```json
 {
     "bitbake.commandWrapper": "kas shell -c",
-    "bitbake.pathToBitbakeFolder": "${workspaceFolder}/layers/poky/bitbake"
+    "bitbake.pathToBitbakeFolder": "${workspaceFolder}/layers/poky/bitbake",
+    "python.analysis.exclude": ["**/build"]
 }
 ```
