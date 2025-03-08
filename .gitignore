@@ -2,6 +2,3 @@
 build/
 
 .kas_shell_history
-
-layers/*
-!layers/meta-my-layer
